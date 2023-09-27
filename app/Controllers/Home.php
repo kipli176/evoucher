@@ -21,5 +21,10 @@ class Home extends BaseController
 
         // echo pertama();
         // echo formCari($sesi, $post, $cookie,$id);
+        $client = \Config\Services::curlrequest();
+
+        $response = $client->request('GET', 'https://evoucher.sukipli.work/ceknopol.php', ['verify' => false,'query' => ['nopol' => 'R-7379-QA']]
+        );
+        echo $response->getBody();
     }
 }

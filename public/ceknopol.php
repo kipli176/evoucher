@@ -60,7 +60,7 @@ function pertama()
     preg_match('/id="dSrv" value="(.*)"/', $result, $dsrv);
     file_put_contents('../writable/cache/sesi.txt', $sesi[1], LOCK_EX);
     $capca = kedua($sesi[1], $coki);
-    $post = '__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&txtUSRID=hanindya.hardian&txtPWD=Ironman01&hdCa=' . $capca . '&txtCaptcha=' . $capca . '&gResp=' . $sesi[1] . '&isLgout=&urlLgout=&dSrv=' . $dsrv[1] . '&btnPro=+login+';
+    $post = '__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&txtUSRID=hanindya.hardian&txtPWD=@Ironman01&hdCa=' . $capca . '&txtCaptcha=' . $capca . '&gResp=' . $sesi[1] . '&isLgout=&urlLgout=&dSrv=' . $dsrv[1] . '&btnPro=+login+';
     file_put_contents('../writable/cache/post.txt', $post, LOCK_EX);
 
     if (curl_errno($ch)) {
@@ -245,6 +245,7 @@ function formCari($sesi, $post, $cookie, $plat)
     if($thArray[0]=='null'){
         pertama();
     }else{
+        header('Content-Type: application/json; charset=utf-8');
         return json_encode($array);
     }
     if (curl_errno($ch2)) {
