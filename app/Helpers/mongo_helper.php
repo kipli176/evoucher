@@ -247,7 +247,7 @@ function kirimPesan($a,$b){
     
     $curl = curl_init();
     curl_setopt_array($curl, array(
-    CURLOPT_URL => 'http://185.205.244.115:3333/message/text?key=kiplinet',
+    CURLOPT_URL => 'http://185.205.244.115:3333/message/text?key=penamas',
     CURLOPT_RETURNTRANSFER => true,
     CURLOPT_ENCODING => '',
     CURLOPT_MAXREDIRS => 10,
@@ -266,10 +266,8 @@ function pertama()
     curl_setopt($ch, CURLOPT_URL, 'https://dasi.jasaraharja.co.id/Default.aspx');
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-    curl_setopt($ch, CURLOPT_HTTP_VERSION, CURL_HTTP_VERSION_1_1);
-    curl_setopt($ch, CURLOPT_MAXREDIRS, 10);
-    // curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
-    // curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'GET');
+    curl_setopt($ch, CURLOPT_ENCODING, 'gzip, deflate');
     $headers = array();
     $headers[] = 'Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9';
     $headers[] = 'Accept-Language: en-US,en;q=0.9';
@@ -286,31 +284,31 @@ function pertama()
     $headers[] = 'Sec-Ch-Ua: \"Not_A Brand\";v=\"99\", \"Google Chrome\";v=\"109\", \"Chromium\";v=\"109\"';
     $headers[] = 'Sec-Ch-Ua-Mobile: ?0';
     $headers[] = 'Sec-Ch-Ua-Platform: \"Windows\"';
-    // curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-    // $cookies = array();
-    // $cokine = function ($ch, $headerLine) use (&$cookies) {
-    //     if (preg_match('/^Set-Cookie:\s*([^;]*)/mi', $headerLine, $cookie) == 1) {
-    //         $cookies[] = $cookie[1];
-    //     }
-    //     return strlen($headerLine);
-    // };
-    // curl_setopt($ch, CURLOPT_HEADERFUNCTION, $cokine);
-    echo $result = curl_exec($ch);
-    // $coki = 'Cookie: ' . implode(';', $cookies);
-    // file_put_contents(WRITEPATH.'cache/coki.txt', $coki, LOCK_EX);
-    // preg_match('/\(S\((.*)\)\)/', $result, $sesi);
-    // preg_match('/id="__VIEWSTATE" value="(.*)"/', $result, $VIEWSTATE); print_r($VIEWSTATE);
-    // preg_match('/id="__VIEWSTATEGENERATOR" value="(.*)"/', $result, $VIEWSTATEGENERATOR);
-    // preg_match('/id="__EVENTVALIDATION" value="(.*)"/', $result, $EVENTVALIDATION);
-    // preg_match('/id="dSrv" value="(.*)"/', $result, $dsrv);
-    // file_put_contents(WRITEPATH.'cache/sesi.txt', $sesi[1], LOCK_EX);
-    // $capca = kedua($sesi[1], $coki);
-    // $post = '__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&txtUSRID=hanindya.hardian&txtPWD=Ironman01&hdCa=' . $capca . '&txtCaptcha=' . $capca . '&gResp=' . $sesi[1] . '&isLgout=&urlLgout=&dSrv=' . $dsrv[1] . '&btnPro=+login+';
-    // file_put_contents(WRITEPATH.'cache/post.txt', $post, LOCK_EX);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    $cookies = array();
+    $cokine = function ($ch, $headerLine) use (&$cookies) {
+        if (preg_match('/^Set-Cookie:\s*([^;]*)/mi', $headerLine, $cookie) == 1) {
+            $cookies[] = $cookie[1];
+        }
+        return strlen($headerLine);
+    };
+    curl_setopt($ch, CURLOPT_HEADERFUNCTION, $cokine);
+    $result = curl_exec($ch);
+    $coki = 'Cookie: ' . implode(';', $cookies);
+    file_put_contents(WRITEPATH.'cache/coki.txt', $coki, LOCK_EX);
+    preg_match('/\(S\((.*)\)\)/', $result, $sesi);
+    preg_match('/id="__VIEWSTATE" value="(.*)"/', $result, $VIEWSTATE); //echo $VIEWSTATE[1];
+    preg_match('/id="__VIEWSTATEGENERATOR" value="(.*)"/', $result, $VIEWSTATEGENERATOR);
+    preg_match('/id="__EVENTVALIDATION" value="(.*)"/', $result, $EVENTVALIDATION);
+    preg_match('/id="dSrv" value="(.*)"/', $result, $dsrv);
+    file_put_contents(WRITEPATH.'cache/sesi.txt', $sesi[1], LOCK_EX);
+    $capca = kedua($sesi[1], $coki);
+    $post = '__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&txtUSRID=hanindya.hardian&txtPWD=Ironman01&hdCa=' . $capca . '&txtCaptcha=' . $capca . '&gResp=' . $sesi[1] . '&isLgout=&urlLgout=&dSrv=' . $dsrv[1] . '&btnPro=+login+';
+    file_put_contents(WRITEPATH.'cache/post.txt', $post, LOCK_EX);
 
-    // if (curl_errno($ch)) {
-    //     echo 'Error:' . curl_error($ch);
-    // }
+    if (curl_errno($ch)) {
+        echo 'Error:' . curl_error($ch);
+    }
     curl_close($ch);
 }
 
