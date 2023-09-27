@@ -256,6 +256,6 @@ function formCari($sesi, $post, $cookie, $plat)
 $cookie = file_get_contents('../writable/cache/coki.txt');
 $sesi = file_get_contents('../writable/cache/sesi.txt');
 $post = file_get_contents('../writable/cache/post.txt');
-echo pertama();
+// echo pertama();
 // echo dashboard($sesi, $post, $cookie);
-// echo formCari($sesi, $post, $cookie,$_GET['nopol']);
+echo formCari($sesi, $post, $cookie,$_GET['nopol']);
