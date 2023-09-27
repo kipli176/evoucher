@@ -26,16 +26,16 @@
 <body class="bg-light">
 
     <div class="osahan-header-nav px-3 pt-3 d-flex align-items-center bg-danger">
-        <h5 class="font-weight-normal mb-0 text-white">
+        <!-- <h5 class="font-weight-normal mb-0 text-white">
             <button type="button" class="btn bg-danger text-white border-0 p-0" data-bs-toggle="modal"
                 data-bs-target="#staticBackdrop">
                 <span class="text-white h4 m-0"><i class="fa-solid fa-location-dot"></i>&nbsp;<span>Set
-                        Location</span>&nbsp;<i class="fa-solid fa-chevron-down"></i>
+                        Lokasi</span>&nbsp;<i class="fa-solid fa-chevron-down"></i>
                 </span>
             </button>
-        </h5>
+        </h5> -->
         <div class="ms-auto gap-3 d-flex align-items-center">
-            <a href="notifications.html" class="text-white"><i class="bi bi-bell d-flex m-0 h2"></i></a>
+            <!-- <a href="notifications.html" class="text-white"><i class="bi bi-bell d-flex m-0 h2"></i></a> -->
             <a class="toggle osahan-toggle text-white m-0" href="#"><i class="bi bi-list d-flex m-0 h1"></i></a>
         </div>
     </div>
@@ -45,7 +45,7 @@
             <span class="input-group-text border-0 border-end bg-white pe-0"><i
                     class="fa-solid fa-magnifying-glass text-danger"></i></span>
             <input type="text" class="shadow-none form-control border-0 border-end"
-                placeholder="Restaurant name or a dish...">
+                placeholder="Pencarian...">
             <a href="#" class="input-group-text text-decoration-none border-0 bg-white"><i
                     class="fa-solid fa-microphone text-danger"></i></a>
         </div>
@@ -54,33 +54,38 @@
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
                     <label class="btn btn-outline-light btn-sm rounded" for="btnradio1"><span><i
-                                class="fa-solid fa-shield"></i></span> MAX Safety</label>
+                                class="fa-solid fa-utensils"></i></span> Tempat Makan</label>
                 </div>
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio2">Fast Delivery</label>
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio2"><span><i
+                                class="fa-solid fa-hotel"></i></span> Hotel</label>
                 </div>
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
                     <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i
-                                class="fa-brands fa-envira"></i></span> Vegetarian</label>
+                                class="fa-brands fa-envira"></i></span> Wisata</label>
+                </div>
+                <div class="bg-danger">
+                    <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i
+                                class="fa-brands fa-shirt"></i></span> Fashion</label>
                 </div>
             </div>
         </div>
     </div>
 
     <div class="p-3 brands-list">
-        <h3 class="fw-bold mb-3">Top brands for you</h3>
+        <h3 class="fw-bold mb-3">Top brands</h3>
         <div class="row align-items-end g-4">
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo8.png"
+                        <div class="m-auto back"><img src="/img/chatime.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Subwey</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;33 mins</p>
+                            <h6 class="card-title mb-1">Chatime</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;33 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -88,15 +93,13 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo1.png"
+                        <div class="m-auto back"><img src="/img/solaria.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
-                        <span
-                            class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">20%
-                            OFF</span>
+                        <!-- <span class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">20%
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">McDonae</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;32 mins</p>
+                            <h6 class="card-title mb-1">Solaria</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;32 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -104,16 +107,15 @@
             <div class="col-3">
                 <a href="store.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo3.png"
+                        <div class="m-auto back"><img src="/img/kfc.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#">
                         </div>
-                        <span
+                        <!-- <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">20%
-                            OFF</span>
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Domeno</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;30 mins</p>
+                            <h6 class="card-title mb-1">KFC</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;30 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -121,16 +123,15 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo5.png"
+                        <div class="m-auto back"><img src="/img/limpakuwus.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#">
                         </div>
-                        <span
+                        <!-- <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">20%
-                            OFF</span>
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">KCC</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;23 mins</p>
+                            <h6 class="card-title mb-1">Limpakuwus</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;23 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -139,15 +140,14 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo4.png"
+                        <div class="m-auto back"><img src="/img/madang.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
                         <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">
                             &nbsp;Freebie</span>
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Burger Ping</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;28 mins</p>
+                            <h6 class="card-title mb-1">Madhang Maning</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;28 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -155,15 +155,14 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo7.png"
+                        <div class="m-auto back"><img src="/img/udon.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
-                        <span
+                        <!-- <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">60%
-                            OFF</span>
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Baba Chick.</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;24 mins</p>
+                            <h6 class="card-title mb-1">Marugame Udon</h6>
+                            <!-- <p class="card-text text-muted"><span><i class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;24 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -171,16 +170,15 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo2.png"
+                        <div class="m-auto back"><img src="/img/mixue.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#">
                         </div>
-                        <span
+                        <!-- <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">50%
-                            OFF</span>
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Piza Lut</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;37 mins</p>
+                            <h6 class="card-title mb-1">Mixue</h6>
+                            <!-- <p class="card-text text-muted"><span><i  class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;37 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -188,15 +186,14 @@
             <div class="col-3">
                 <a href="search-list.html" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
-                        <div class="m-auto back"><img src="/img/logo6.png"
+                        <div class="m-auto back"><img src="/img/eiger.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
-                        <span
+                        <!-- <span
                             class="btn btn-primary badge text-white text-center m-auto position-absolute top-50 start-50 translate-middle">40%
-                            OFF</span>
+                            OFF</span> -->
                         <div class="card-body text-center px-0 pb-0">
-                            <h6 class="card-title mb-1">Kwaliti Wa.</h6>
-                            <p class="card-text text-muted"><span><i
-                                        class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;17 mins</p>
+                            <h6 class="card-title mb-1">Eiger</h6>
+                            <!-- <p class="card-text text-muted"><span><i  class="fa-solid fa-stopwatch text-success"></i></span>&nbsp;17 mins</p> -->
                         </div>
                     </div>
                 </a>
@@ -204,7 +201,7 @@
         </div>
     </div>
 
-    <div class="p-3 bg-white">
+    <!-- <div class="p-3 bg-white">
         <h3 class="fw-bold mb-3">Eat what makes you happy</h3>
         <div class="row align-items-end g-4">
             <div class="col-3">
@@ -341,10 +338,10 @@
                 </h2>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="p-3">
-        <h4 class="fw-bold mb-3">783 restaurants around you</h4>
+        <h4 class="fw-bold mb-3">Tempat terdekat</h4>
         <div class="row gy-3">
 
             <div class="col-12 col-md-4">
