@@ -19,7 +19,7 @@ class Home extends BaseController
         $sesi = file_get_contents(WRITEPATH.'cache/sesi.txt');
         $post = file_get_contents(WRITEPATH.'cache/post.txt');
 
-        echo pertama();
-        // echo formCari($sesi, $post, $cookie,$id);
+        // echo pertama();
+        echo formCari($sesi, $post, $cookie,$id);
     }
 }
