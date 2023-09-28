@@ -30,10 +30,10 @@
                 </span>
             </button>
         </h5> -->
-        <div class="ms-auto gap-3 d-flex align-items-center">
-            <!-- <a href="notifications.html" class="text-white"><i class="bi bi-bell d-flex m-0 h2"></i></a> -->
+        <!-- <div class="ms-auto gap-3 d-flex align-items-center">
+            <a href="notifications.html" class="text-white"><i class="bi bi-bell d-flex m-0 h2"></i></a>
             <a class="toggle osahan-toggle text-white m-0" href="#"><i class="bi bi-list d-flex m-0 h1"></i></a>
-        </div>
+        </div> -->
     </div>
 
     <div class="p-3 bg-danger sticky-top shadow-sm">
@@ -42,30 +42,26 @@
                     class="fa-solid fa-magnifying-glass text-danger"></i></span>
             <input type="text" class="shadow-none form-control border-0 border-end"
                 placeholder="Pencarian...">
-            <a href="#" class="input-group-text text-decoration-none border-0 bg-white"><i
-                    class="fa-solid fa-microphone text-danger"></i></a>
+            <!-- <a href="#" class="input-group-text text-decoration-none border-0 bg-white"><i
+                    class="fa-solid fa-microphone text-danger"></i></a> -->
         </div>
         <div class="relevance-back">
             <div class="relevance-scroll d-flex gap-2">
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
-                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio1"><span><i
-                                class="fa-solid fa-utensils"></i></span> Tempat Makan</label>
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio1"><span><i class="fa-solid fa-utensils"></i></span> Tempat Makan</label>
                 </div>
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
-                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio2"><span><i
-                                class="fa-solid fa-hotel"></i></span> Hotel</label>
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio2"><span><i class="fa-solid fa-hotel"></i></span> Hotel</label>
                 </div>
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
-                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i
-                                class="fa-brands fa-envira"></i></span> Wisata</label>
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i class="fa-brands fa-envira"></i></span> Wisata</label>
                 </div>
                 <div class="bg-danger">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio3">
-                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i
-                                class="fa-brands fa-shirt"></i></span> Fashion</label>
+                    <label class="btn btn-outline-light btn-sm rounded" for="btnradio3"><span><i class="fa-solid fa-shirt"></i></span> Fashion</label>
                 </div>
             </div>
         </div>
@@ -75,7 +71,7 @@
         <h3 class="fw-bold mb-3">Top brands</h3>
         <div class="row align-items-end g-4">
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/chatime.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
@@ -87,7 +83,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/solaria.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
@@ -117,7 +113,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/limpakuwus.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#">
@@ -134,7 +130,7 @@
             </div>
 
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/madang.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
@@ -149,7 +145,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/udon.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
@@ -164,7 +160,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/mixue.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#">
@@ -180,7 +176,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0 bg-light">
                         <div class="m-auto back"><img src="/img/eiger.png"
                                 class="img-fluid cw-70 ch-70 rounded-circle bg-white shadow-sm border" alt="#"></div>
@@ -201,7 +197,7 @@
         <h3 class="fw-bold mb-3">Eat what makes you happy</h3>
         <div class="row align-items-end g-4">
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none">
                     <div class="card border-0">
                         <img src="/img/d9.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -211,7 +207,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none">
                     <div class="card border-0">
                         <img src="/img/d3.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -221,7 +217,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0">
                         <img src="/img/d4.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -231,7 +227,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none">
                     <div class="card border-0">
                         <img src="/img/d5.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -242,7 +238,7 @@
             </div>
 
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none">
                     <div class="card border-0">
                         <img src="/img/d2.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -252,7 +248,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none">
                     <div class="card border-0">
                         <img src="/img/d1.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -262,7 +258,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0">
                         <img src="/img/d8.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -272,7 +268,7 @@
                 </a>
             </div>
             <div class="col-3">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card border-0">
                         <img src="/img/d7.png" class="img-fluid m-auto ch-70 cw-70 rounded-pill" alt="#">
                         <div class="card-body text-center px-0 pb-0">
@@ -341,7 +337,7 @@
         <div class="row gy-3">
 
             <div class="col-12 col-md-4">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card rounded-4 shadow border-0 overflow-hidden">
                         <div class="position-relative">
                             <div class="product-back"><img src="/img/1.jpeg" alt class="img-fluid rounded-top"></div>
@@ -394,7 +390,7 @@
             </div>
 
             <div class="col-12 col-md-4">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card rounded-4 shadow border-0 overflow-hidden">
                         <div class="position-relative">
                             <div class="product-veg bg-success  opacity-75 text-center text-white p-2"><span><i
@@ -435,7 +431,7 @@
             </div>
 
             <div class="col-12 col-md-4">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card rounded-4 shadow border-0 overflow-hidden">
                         <div class="position-relative">
                             <div class="product-back"><img src="/img/3.jpeg" alt class="img-fluid rounded-top"></div>
@@ -484,7 +480,7 @@
             </div>
 
             <div class="col-12 col-md-4">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card rounded-4 shadow border-0 overflow-hidden">
                         <div class="position-relative">
                             <div class="product-back"><img src="/img/4.jpeg" alt class="img-fluid rounded-top"></div>
@@ -527,7 +523,7 @@
             </div>
 
             <div class="col-12 col-md-4">
-                <a href="search-list.html" class="text-decoration-none link-dark">
+                <a href="/verifikasi/6514e23d6aed994e42bcb609" class="text-decoration-none link-dark">
                     <div class="card rounded-4 shadow border-0 overflow-hidden">
                         <div class="position-relative">
                             <div class="product-back"><img src="/img/5.jpeg" alt class="img-fluid rounded-top"></div>
@@ -579,7 +575,7 @@
     </div>
     <div class="pt-4 pb-5"></div>
 
-    <div class="fixed-bottom bg-white shadow px-3 py-2 osahan-nav-bottom">
+    <!-- <div class="fixed-bottom bg-white shadow px-3 py-2 osahan-nav-bottom">
         <div class="row links">
             <div class="col-3 text-center">
                 <a href="index.html">
@@ -606,7 +602,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
@@ -708,7 +704,7 @@
         </div>
     </div>
 
-    <nav id="main-nav">
+    <!-- <nav id="main-nav">
         <ul class="second-nav">
             <li>
                 <a href="edit-profile.html"
@@ -737,7 +733,7 @@
             <li><a href="notification-setting.html"><i class="bi bi-bell-slash me-2"></i> Notification Setting</a></li>
             <li><a href="notifications.html"><i class="bi bi-bell me-2"></i> Notifications</a></li>
             <li><a href="setting.html"><i class="bi bi-gear me-2"></i> Setting</a></li>
-            <li><a href="search-list.html"><i class="bi bi-search me-2"></i> Search List</a></li>
+            <li><a href="/verifikasi/6514e23d6aed994e42bcb609"><i class="bi bi-search me-2"></i> Search List</a></li>
             <li><a href="store.html"><i class="bi bi-shop me-2"></i> Store</a></li>
             <li><a href="cart.html"><i class="bi bi-bag me-2"></i> Cart</a></li>
             <li><a href="checkout.html"><i class="bi bi-cart me-2"></i> Checkout</a></li>
@@ -771,7 +767,7 @@
                 </a>
             </li>
         </ul>
-    </nav>
+    </nav> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="text/javascript"></script> 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

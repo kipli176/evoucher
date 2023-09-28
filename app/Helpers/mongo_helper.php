@@ -24,7 +24,7 @@ function getId($a, $b)
     $database = $connection->getDatabase();
     $collection = $database->$a;
     try {
-        $cursor = $collection->findOne(['_id' => new \MongoDB\BSON\ObjectId($b)]);
+        $cursor = $collection->findOne(['_id' => new \MongoDB\BSON\ObjectId($b)])->getArrayCopy();
 
         return $cursor;
     } catch (\MongoDB\Exception\RuntimeException $ex) {
@@ -34,6 +34,44 @@ function getId($a, $b)
     }
 }
 
+function getNopol($a, $b)
+{
+    $connection = new Db();
+    $database = $connection->getDatabase();
+    $collection = $database->$a;
+    try {
+        $cursor = $collection->findOne(['tnkb' => $b]);
+
+        return $cursor;
+    } catch (\MongoDB\Exception\RuntimeException $ex) {
+        show_error('Error while fetching books: '.$ex->getMessage(), 500);
+
+        // return 'Error while fetching books: '.$ex->getMessage();
+    }
+}
+
+function prosesNopol($a,$b)
+{
+    $connection = new Db();
+    $database = $connection->getDatabase();
+    $collection = $database->$a;
+    try {
+        $result = $collection->updateOne(
+            ['_id' => new \MongoDB\BSON\ObjectId($b)],
+            ['$set' => [
+                'status' => 1, 
+            ]]
+        );
+
+        if ($result->getModifiedCount()) {
+            return true;
+        }
+
+        return false;
+    } catch (\MongoDB\Exception\RuntimeException $ex) {
+        show_error('Error : '.$ex->getMessage(), 500);
+    }
+}
 function saveData($a, $b)
 {
     $connection = new Db();
@@ -43,12 +81,13 @@ function saveData($a, $b)
         $insertOneResult = $collection->insertOne($b);
 
         if ($insertOneResult->getInsertedCount() == 1) {
-            return true;
+            return $insertOneResult->getInsertedId();
         }
 
         return false;
     } catch (\MongoDB\Exception\RuntimeException $ex) {
-        show_error('Error while creating a book: '.$ex->getMessage(), 500);
+        return 'Error while creating a book: '.$ex->getMessage();
+        // show_error('Error while creating a book: '.$ex->getMessage(), 500);
     }
 }
 
@@ -120,7 +159,7 @@ function prosesId($a,$b)
 
         return false;
     } catch (\MongoDB\Exception\RuntimeException $ex) {
-        show_error('Error while updating a book with ID: '.$id.$ex->getMessage(), 500);
+        show_error('Error : '.$ex->getMessage(), 500);
     }
 }
 

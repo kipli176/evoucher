@@ -225,7 +225,7 @@ function formCari($sesi, $post, $cookie, $plat)
     $array['tnkb'] = $plat;
     $array['alamat'] = $thArray[10];
     $array['golongan'] = $thArray[4];
-    $array['hp'] = $thArray[11];
+    // $array['hp'] = $thArray[11];
     $array['nik'] = $thArray[12];
     $array['jatuh_tempo'] = $thArray[23];
     $array['jenis_kendaraan'] = $thArray[5];

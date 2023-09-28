@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'codeigniter4/appstarter',
-        'pretty_version' => 'v4.4.1',
-        'version' => '4.4.1.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'b610984bf315a7676bb88ad960059a0e8b0bc929',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'codeigniter4/appstarter' => array(
-            'pretty_version' => 'v4.4.1',
-            'version' => '4.4.1.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'b610984bf315a7676bb88ad960059a0e8b0bc929',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -46,6 +46,15 @@
             'aliases' => array(),
             'dev_requirement' => true,
         ),
+        'jean85/pretty-package-versions' => array(
+            'pretty_version' => '2.0.5',
+            'version' => '2.0.5.0',
+            'reference' => 'ae547e455a3d8babd07b96966b17d7fd21d9c6af',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../jean85/pretty-package-versions',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'laminas/laminas-escaper' => array(
             'pretty_version' => '2.12.0',
             'version' => '2.12.0.0',
@@ -63,6 +72,15 @@
             'install_path' => __DIR__ . '/../mikey179/vfsstream',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'mongodb/mongodb' => array(
+            'pretty_version' => '1.12.0',
+            'version' => '1.12.0.0',
+            'reference' => 'e4a7594ac4b31635fa77455c4038a7013024ba28',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../mongodb/mongodb',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'myclabs/deep-copy' => array(
             'pretty_version' => '1.11.1',
@@ -324,6 +342,15 @@
             'install_path' => __DIR__ . '/../symfony/deprecation-contracts',
             'aliases' => array(),
             'dev_requirement' => true,
+        ),
+        'symfony/polyfill-php80' => array(
+            'pretty_version' => 'v1.28.0',
+            'version' => '1.28.0.0',
+            'reference' => '6caa57379c4aec19c0a12a38b59b26487dcfe4b5',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/polyfill-php80',
+            'aliases' => array(),
+            'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(
             'pretty_version' => '1.2.1',
