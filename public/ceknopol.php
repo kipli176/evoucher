@@ -143,7 +143,7 @@ function dashboard($sesi, $post, $cookie)
 
 function formCari($sesi, $post, $cookie, $plat)
 {
-    $cookies = file_get_contents('coki.txt');
+    $cookies = file_get_contents('coki.txt'); 
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, 'https://dasi.jasaraharja.co.id/(S(' . $sesi . '))/Mod_Asuransi/SW/Form/Master_Data/frmManajemenDataKendaraan.aspx');
@@ -177,8 +177,9 @@ function formCari($sesi, $post, $cookie, $plat)
     preg_match('/id="__VIEWSTATEGENERATOR" value="(.*)"/', $result, $VIEWSTATEGENERATOR);
     preg_match('/id="__EVENTVALIDATION" value="(.*)"/', $result, $EVENTVALIDATION);
     // print_r($ctl00_HidUsrLogn);
-    $post2 = 'ctl00%24scrMgr=ctl00%24updMain%7Cctl00%24MainContent%24btn_cari&__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&ctl00%24MainContent%24txtCariNoPolisi='.$plat.'&ctl00%24MainContent%24txtCariNoRangka=&ctl00%24MainContent%24txtCariNoMesin=&ctl00%24MainContent%24txtCariHp=&ctl00%24MainContent%24modeEntry=&ctl00%24MainContent%24txtGridValue=&ctl00%24MainContent%24value_nopol=&ctl00%24MainContent%24JSApprResp=&ctl00%24MainContent%24viewMode=&ctl00%24MainContent%24flagServer=SW&ctl00%24HidUsrLogn=921535099&ctl00%24HidUsrSess='.$sesi.'&ctl00%24HidUsrKntr=0400301&ctl00%24HidUsrLvl=&ctl00%24HidUsrKntrOrigin=0400301&ctl00%24HidLvlKntr=&ctl00%24viewMode=default&ctl00%24JSApprResp=false&__ASYNCPOST=true&ctl00%24MainContent%24btn_cari=%20Cari%20';
-    // file_put_contents('post.txt', $post2, LOCK_EX);
+    $poste = 'ctl00%24scrMgr=ctl00%24updMain%7Cctl00%24MainContent%24btn_cari&__EVENTTARGET=&__EVENTARGUMENT=&__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&ctl00%24MainContent%24txtCariNoPolisi='.$plat.'&ctl00%24MainContent%24txtCariNoRangka=&ctl00%24MainContent%24txtCariNoMesin=&ctl00%24MainContent%24txtCariHp=&ctl00%24MainContent%24modeEntry=&ctl00%24MainContent%24txtGridValue=&ctl00%24MainContent%24value_nopol=&ctl00%24MainContent%24JSApprResp=&ctl00%24MainContent%24viewMode=&ctl00%24MainContent%24flagServer=SW&ctl00%24HidUsrLogn=921535099&ctl00%24HidUsrSess='.$sesi.'&ctl00%24HidUsrKntr=0400301&ctl00%24HidUsrLvl=&ctl00%24HidUsrKntrOrigin=0400301&ctl00%24HidLvlKntr=&ctl00%24viewMode=default&ctl00%24JSApprResp=false&__ASYNCPOST=true&ctl00%24MainContent%24btn_cari=%20Cari%20';
+    file_put_contents('post.txt', $poste, LOCK_EX);
+    //$post=file_get_contents('post.txt');
     if (curl_errno($ch)) {
         echo 'Error:' . curl_error($ch);
     }
@@ -188,7 +189,7 @@ function formCari($sesi, $post, $cookie, $plat)
     curl_setopt($ch2, CURLOPT_URL, 'https://dasi.jasaraharja.co.id/(S('.$sesi.'))/Mod_Asuransi/SW/Form/Master_Data/frmManajemenDataKendaraan.aspx');
     curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch2, CURLOPT_POST, 1);
-    curl_setopt($ch2, CURLOPT_POSTFIELDS, $post2);
+    curl_setopt($ch2, CURLOPT_POSTFIELDS, $post);
     curl_setopt($ch2, CURLOPT_ENCODING, 'gzip, deflate');
 
     $headers = array();

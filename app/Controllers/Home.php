@@ -73,6 +73,7 @@ class Home extends BaseController
             $data['id_merchant']= $this->request->getPost('id_merchant');
             return view('verif',$data);
         }else{ 
+            session()->destroy();
             session()->set('datane', $nopole);
             $data['nopol']= $nopole;
             return view('detail',$data);
