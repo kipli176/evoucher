@@ -52,16 +52,16 @@ function pertama()
     curl_setopt($ch, CURLOPT_HEADERFUNCTION, $cokine);
     $result = curl_exec($ch);
     $coki = 'Cookie: ' . implode(';', $cookies);
-    file_put_contents('../writable/cache/coki.txt', $coki, LOCK_EX);
+    file_put_contents('coki.txt', $coki, LOCK_EX);
     preg_match('/\(S\((.*)\)\)/', $result, $sesi);
     preg_match('/id="__VIEWSTATE" value="(.*)"/', $result, $VIEWSTATE); //echo $VIEWSTATE[1];
     preg_match('/id="__VIEWSTATEGENERATOR" value="(.*)"/', $result, $VIEWSTATEGENERATOR);
     preg_match('/id="__EVENTVALIDATION" value="(.*)"/', $result, $EVENTVALIDATION);
     preg_match('/id="dSrv" value="(.*)"/', $result, $dsrv);
-    file_put_contents('../writable/cache/sesi.txt', $sesi[1], LOCK_EX);
+    file_put_contents('sesi.txt', $sesi[1], LOCK_EX);
     $capca = kedua($sesi[1], $coki);
     $post = '__VIEWSTATE=' . urlencode($VIEWSTATE[1]) . '&__VIEWSTATEGENERATOR=' . urlencode($VIEWSTATEGENERATOR[1]) . '&__EVENTVALIDATION=' . urlencode($EVENTVALIDATION[1]) . '&txtUSRID=hanindya.hardian&txtPWD=@Ironman01&hdCa=' . $capca . '&txtCaptcha=' . $capca . '&gResp=' . $sesi[1] . '&isLgout=&urlLgout=&dSrv=' . $dsrv[1] . '&btnPro=+login+';
-    file_put_contents('../writable/cache/post.txt', $post, LOCK_EX);
+    file_put_contents('post.txt', $post, LOCK_EX);
 
     if (curl_errno($ch)) {
         echo 'Error:' . curl_error($ch);
@@ -143,7 +143,7 @@ function dashboard($sesi, $post, $cookie)
 
 function formCari($sesi, $post, $cookie, $plat)
 {
-    $cookies = file_get_contents('../writable/cache/coki.txt');
+    $cookies = file_get_contents('coki.txt');
     $ch = curl_init();
 
     curl_setopt($ch, CURLOPT_URL, 'https://dasi.jasaraharja.co.id/(S(' . $sesi . '))/Mod_Asuransi/SW/Form/Master_Data/frmManajemenDataKendaraan.aspx');
@@ -253,9 +253,9 @@ function formCari($sesi, $post, $cookie, $plat)
     }
     curl_close($ch2);
 }
-$cookie = file_get_contents('../writable/cache/coki.txt');
-$sesi = file_get_contents('../writable/cache/sesi.txt');
-$post = file_get_contents('../writable/cache/post.txt');
+$cookie = file_get_contents('coki.txt');
+$sesi = file_get_contents('sesi.txt');
+$post = file_get_contents('post.txt');
 // echo pertama();
 // echo dashboard($sesi, $post, $cookie);
 echo formCari($sesi, $post, $cookie,$_GET['nopol']);
