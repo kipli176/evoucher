@@ -242,7 +242,7 @@ function formCari($sesi, $post, $cookie, $plat)
         $status = 'Belum Lunas';
     } 
     $array['status'] = $status;
-    if($thArray[0]=='null'){
+    if($thArray[9]=='null'){
         pertama();
     }else{
         header('Content-Type: application/json; charset=utf-8');
