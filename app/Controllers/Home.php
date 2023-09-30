@@ -8,7 +8,7 @@ class Home extends BaseController
     {
         $session = session(); 
         // print_r($_SESSION);
-        // print_r(session()->get('datane'));
+        // print_r(session()->get());
         if(session()->get('datane')){
             if(array_key_exists('_id',session()->get('datane'))){
                 return redirect()->to('/barcode/'.session()->get('datane')['_id']);
@@ -57,6 +57,7 @@ class Home extends BaseController
     public function nopol()
     {
         helper(['mongo']);
+        session()->remove('datane');
         $nopol=$this->request->getPost('dp').'-'.$this->request->getPost('tg').'-'.$this->request->getPost('bl');
         $client = \Config\Services::curlrequest();
         $response = $client->request('GET', 'https://evoucher.sukipli.work/ceknopol.php', ['verify' => false,'query' => ['nopol' => $nopol]]);
@@ -73,9 +74,8 @@ class Home extends BaseController
             $data['id_merchant']= $this->request->getPost('id_merchant');
             return view('verif',$data);
         }else{ 
-            session()->destroy();
-            session()->set('datane', $nopole);
             $data['nopol']= $nopole;
+            session()->set('datane', $nopole);
             return view('detail',$data);
         }
     } 
@@ -83,16 +83,21 @@ class Home extends BaseController
     { 
         helper(['mongo']); 
         $sesi=session()->get('datane'); 
-         $simpan=saveData('data',$sesi); 
+        // print_r(session()->get());
+        $simpan=saveData('data',$sesi); 
         $usere=getId('data',$simpan);
-        session()->push('datane', $usere); 
+        // session()->push('datane', $usere); 
         return redirect()->to('/barcode/'.$simpan); 
     }
 
     public function barcode($id)
     {
         helper(['mongo']);
+        $usere=getId('data',$id);
+        $merchant=getId('merchant',$usere['id_merchant']);
+        session()->push('datane', $usere); 
         $data['_id']=$id;
+        $data['usere']=$merchant;
         return view('barcode',$data);
     }
     

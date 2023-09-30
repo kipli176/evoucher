@@ -23,7 +23,7 @@
     <div class="bg-white shadow-sm p-3">
         <div class="d-flex align-items-center">
             <div class="gap-3 d-flex align-items-center">
-                <a onclick="history.back()"><i class="bi bi-arrow-left d-flex text-danger h2 m-0 back-page"></i></a>
+                <a onclick="history.go(-1)"><i class="bi bi-arrow-left d-flex text-danger h2 m-0 back-page"></i></a>
                 <h3 class="fw-bold m-0">Detail Kendaraan</h3>
             </div>
             <div class="ms-auto gap-3 d-flex align-items-center">
@@ -202,10 +202,10 @@
     <script src="/js/hc-offcanvas-nav.js" type="text/javascript"></script>
     <script src="/js/custom.js" type="text/javascript"></script>
     <script>
-    <?php if($nopol['status']=='Belum Lunass'){?>
-        $('#lanjut').attr('href', '#');
+    <?php if($nopol['status']=='Belum Lunas'){?>
+        $('#lanjut').prop('disabled', true);
     <?php  }else{?>
-        $('#lanjut').attr('href', '/barcode/<?=$nopol['id_merchant'];?>');
+        $('#lanjut').prop('disabled', false);
     <?php }?>
     </script>
 </body>
